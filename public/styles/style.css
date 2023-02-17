@@ -1,0 +1,128 @@
+* {
+  color: black;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #10171B;
+}
+
+.loginAndRegisterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #10171B;
+  background-image: url("../images/table.jpg");
+  background-size: cover;
+  gap: 40px;
+}
+.loginAndRegisterContainer h1 {
+  font-size: 60px;
+  color: #3C84AB;
+}
+.loginAndRegisterContainer .main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  height: 450px;
+  border: 3px;
+  gap: 20px;
+}
+.loginAndRegisterContainer .main h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+}
+.loginAndRegisterContainer .main a {
+  all: unset;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.loginAndRegisterContainer .main form {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.loginAndRegisterContainer .main form input {
+  height: 40px;
+  width: 260px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.loginAndRegisterContainer .main form #regitserPopMessage {
+  position: absolute;
+  bottom: 130px;
+  padding: 0;
+  margin: 0;
+  color: red;
+}
+.loginAndRegisterContainer .main form #loginPopMessage {
+  position: absolute;
+  bottom: 165px;
+  padding: 0;
+  margin: 0;
+  color: red;
+}
+.loginAndRegisterContainer .main form #submitBtn {
+  box-shadow: none;
+  width: 150px;
+  height: 45px;
+  transition: 500ms;
+  backface-visibility: hidden;
+  margin-top: 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background: linear-gradient(180deg, #f9f9f9 0%, #e0e0e0 100%);
+  border-radius: 50px;
+  padding: 4px 22px 5px 22px;
+  color: black;
+  font-size: 18px;
+  border: 1px solid #3C84AB;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.loginAndRegisterContainer .main form #submitBtn:hover {
+  background: #85CDFD;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 390px) {
+  .loginAndRegisterContainer h1 {
+    font-size: 45px;
+  }
+
+  .main {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .main {
+    width: 600px;
+  }
+}
