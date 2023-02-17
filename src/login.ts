@@ -5,6 +5,14 @@ if (!allUsersString){
     localStorage.setItem('allUsers',JSON.stringify(emptyArray))
 }
 
+const isLoggedInString = localStorage.getItem('isLoggedIn');
+if(isLoggedInString){
+    const isLoggedIn = JSON.parse(isLoggedInString);
+    if (isLoggedIn.isLoggedIn == true){
+        location.href = 'index.html'
+    }
+}
+
 function loginHandler(e){
     e.preventDefault();
     const allUsersString = localStorage.getItem('allUsers');
@@ -13,6 +21,7 @@ function loginHandler(e){
     const passwordInput = document.querySelector("#password");
     const popMessage = document.querySelector('#loginPopMessage');
     localStorage.setItem('isLoggedIn','false');
+
 
     if(allUsersString){
         const allUsersArray = JSON.parse(allUsersString);
