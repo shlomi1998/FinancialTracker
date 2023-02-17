@@ -3,6 +3,13 @@ if (!allUsersString) {
     var emptyArray = [];
     localStorage.setItem('allUsers', JSON.stringify(emptyArray));
 }
+var isLoggedInString = localStorage.getItem('isLoggedIn');
+if (isLoggedInString) {
+    var isLoggedIn = JSON.parse(isLoggedInString);
+    if (isLoggedIn.isLoggedIn == true) {
+        location.href = 'index.html';
+    }
+}
 function loginHandler(e) {
     e.preventDefault();
     var allUsersString = localStorage.getItem('allUsers');
@@ -19,8 +26,8 @@ function loginHandler(e) {
                 if (user.username.toLowerCase() === username.toLowerCase() && user.password === password) {
                     console.log("okay");
                     foundUser_1 = true;
-                    var isLoggedInString = "{\"isLoggedIn\":true,\"username\":\"" + user.username + "\"}";
-                    localStorage.setItem('isLoggedIn', isLoggedInString);
+                    var isLoggedInString_1 = "{\"isLoggedIn\":true,\"username\":\"" + user.username + "\"}";
+                    localStorage.setItem('isLoggedIn', isLoggedInString_1);
                     location.href = 'index.html';
                 }
             });
