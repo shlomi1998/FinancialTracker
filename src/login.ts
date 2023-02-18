@@ -9,7 +9,7 @@ const isLoggedInString = localStorage.getItem('isLoggedIn');
 if(isLoggedInString){
     const isLoggedIn = JSON.parse(isLoggedInString);
     if (isLoggedIn.isLoggedIn == true){
-        location.href = 'index.html'
+        location.href = '../../HomePage.html'
     }
 }
 
@@ -33,7 +33,7 @@ function loginHandler(e){
                     foundUser = true;
                     const isLoggedInString = `{"isLoggedIn":true,"username":"${user.username}"}`
                     localStorage.setItem('isLoggedIn',isLoggedInString)
-                    location.href = 'index.html'
+                    location.href = '../../HomePage.html'
                 }
             });
             if (!foundUser){
