@@ -7,7 +7,7 @@ var isLoggedInString = localStorage.getItem('isLoggedIn');
 if (isLoggedInString) {
     var isLoggedIn = JSON.parse(isLoggedInString);
     if (isLoggedIn.isLoggedIn == true) {
-        location.href = 'index.html';
+        location.href = '../../HomePage.html';
     }
 }
 function loginHandler(e) {
@@ -28,7 +28,7 @@ function loginHandler(e) {
                     foundUser_1 = true;
                     var isLoggedInString_1 = "{\"isLoggedIn\":true,\"username\":\"" + user.username + "\"}";
                     localStorage.setItem('isLoggedIn', isLoggedInString_1);
-                    location.href = 'index.html';
+                    location.href = '../../HomePage.html';
                 }
             });
             if (!foundUser_1) {
