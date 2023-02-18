@@ -11,38 +11,22 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
+    <script src="./dist/control.js" defer></script>
     <title>Document</title>
   </head>
   <body>
+
+    <div class="navbar">
+      <div class="navbarTitle">Financial Tracker</div>
+      <div class="logoutBtn">Log Out</div>
+    </div>
     <div class="categories">
-      <div class="incomButton"><div class="buttonText">income</div></div>
-      <div class="expenseButton"><div class="buttonText">expense</div></div>
+      <div id="incomButton" onclick="toggleOptions('INCOME')"><div class="buttonText">income</div></div>
+      <div id="expenseButton" onclick="toggleOptions('EXPENSE')"><div class="buttonText">expense</div></div>
     </div>
 
-    <div class="expensesWrapper">
-      <div class="expensesTitle">
-        Total expenses for the month of March are: 1,097.87$
-      </div>
-      <div class="singleExpenseWrapper">
-        <div class="singleExpense">
-          <div>expense</div>
-          <div>sum</div>
-        </div>
-        <div>category</div>
-      </div>
-      <div class="singleExpenseWrapper">
-        <div class="singleExpense">
-          <div>expense</div>
-          <div>sum</div>
-        </div>
-        <div>category</div>
-      </div>
-      <div class="singleExpenseWrapper">
-        <div class="singleExpense">
-          <div>expense</div>
-          <div>sum</div>
-        </div>
-        <div>category</div>
+    <div id="expensesWrapper">
+     
       </div>
     </div>
   </body>

@@ -1,34 +1,71 @@
-var expenseCategories;
-(function (expenseCategories) {
-    expenseCategories["rent"] = "Rent";
-    expenseCategories["grocories"] = "Grocories";
-    expenseCategories["clothing"] = "Clothing";
-    expenseCategories["bills"] = "Bills";
-    expenseCategories["entertainment"] = "Entertainment";
-    expenseCategories["restaurants"] = "Restaurants";
-    expenseCategories["general"] = "General";
-})(expenseCategories || (expenseCategories = {}));
-var incomCategories;
-(function (incomCategories) {
-    incomCategories["salary"] = "Salary";
-    incomCategories["gift"] = "Gift";
-    incomCategories["general"] = "General";
-    incomCategories["bonus"] = "Bonus";
-})(incomCategories || (incomCategories = {}));
+var EXPENSES_CATEGORIES;
+(function (EXPENSES_CATEGORIES) {
+    EXPENSES_CATEGORIES["Rent"] = "Rent";
+    EXPENSES_CATEGORIES["Grocories"] = "Grocories";
+    EXPENSES_CATEGORIES["Clothing"] = "Clothing";
+    EXPENSES_CATEGORIES["Bills"] = "Bills";
+    EXPENSES_CATEGORIES["Entertainment"] = "Entertainment";
+    EXPENSES_CATEGORIES["Restaurants"] = "Restaurants";
+    EXPENSES_CATEGORIES["General"] = "General";
+})(EXPENSES_CATEGORIES || (EXPENSES_CATEGORIES = {}));
+var INCOME_CATEGORIES;
+(function (INCOME_CATEGORIES) {
+    INCOME_CATEGORIES["Salary"] = "Salary";
+    INCOME_CATEGORIES["Gift"] = "Gift";
+    INCOME_CATEGORIES["General"] = "General";
+    INCOME_CATEGORIES["Bonus"] = "Bonus";
+})(INCOME_CATEGORIES || (INCOME_CATEGORIES = {}));
 var expenses = [
     {
         name: "Rent",
-        category: expenseCategories.rent,
-        sum: "1,000"
+        category: EXPENSES_CATEGORIES.Rent,
+        sum: 1000
     },
     {
         name: "Market",
-        category: expenseCategories.grocories,
-        sum: "67"
+        category: EXPENSES_CATEGORIES.Grocories,
+        sum: 67
     },
     {
         name: "H&M",
-        category: expenseCategories.clothing,
-        sum: "98"
+        category: EXPENSES_CATEGORIES.Clothing,
+        sum: 98
     },
 ];
+var incomes = [
+    {
+        name: "pay",
+        category: INCOME_CATEGORIES.Salary,
+        sum: 1000
+    },
+    {
+        name: "dfbdf",
+        category: INCOME_CATEGORIES.Bonus,
+        sum: 2000
+    },
+    {
+        name: "dssdvsd",
+        category: INCOME_CATEGORIES.General,
+        sum: 98
+    },
+];
+var currentlyDisplayed = "INCOME";
+var toggleOptions = function (newOption) {
+    currentlyDisplayed = newOption;
+    render();
+};
+var render = function () {
+    var currArr = currentlyDisplayed === "INCOME" ? incomes : expenses;
+    var wrapper = document.getElementById("expensesWrapper");
+    var elements = "";
+    var currSum = 0;
+    currArr.forEach(function (element) {
+        currSum += element.sum;
+        elements += "<div class=\"singleExpenseWrapper\">\n    <div class=\"singleExpense\">\n      <div>name: " + element.name + "</div>\n      <div>amount: " + element.sum + "</div>\n    </div>\n    <div>category: " + element.category + "</div>\n  </div>";
+    });
+    if (wrapper)
+        wrapper.innerHTML = " <div class=\"expensesTitle\">\n  Total expenses are: " + currSum + "$\n</div>";
+    if (wrapper)
+        wrapper.innerHTML += elements;
+};
+render();
