@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+.sideBar {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  width: 85px;
+  font-family: "Tilt Warp", cursive;
+}
+.sideBar__logo {
+  position: absolute;
+  top: 28px;
+  left: 15px;
+  color: white;
+  display: none;
+}
+.sideBar__logo__icon {
+  pointer-events: none;
+}
+.sideBar__hamburger {
+  font-size: x-large;
+  margin-top: 25px;
+  margin-left: 25px;
+  color: white;
+  padding: 2px 2px 2px 2px;
+}
+.sideBar__inputImg {
+  position: absolute;
+  margin-top: 60px;
+  height: 60px;
+  left: 0;
+  opacity: 0;
+}
+.sideBar__profile {
+  margin-top: 60px;
+  border: 2px solid white;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 2px rgba(227, 223, 223, 0);
+}
+.sideBar__profile:hover {
+  filter: opacity(80%);
+}
+.sideBar__profile__details {
+  position: relative;
+  color: white;
+  margin-left: 28px;
+  top: 5px;
+}
+.sideBar__possibility {
+  margin-top: 20px;
+  margin-left: 12px;
+  list-style: none;
+}
+.sideBar__possibility li {
+  margin-top: 80px;
+  border-radius: 20%;
+  background-color: #020202;
+  color: white;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+.sideBar__possibility li a {
+  opacity: 0;
+}
+.sideBar__possibility li:hover {
+  position: relative;
+  background-color: white;
+  color: black;
+}
+.sideBar__possibility li:hover a {
+  text-decoration: none;
+  position: absolute;
+  margin-left: 20px;
+  font-size: xx-large;
+  left: 40px;
+  background-color: white;
+  color: black;
+}
+.sideBar .liIncome:hover {
+  background-color: black;
+  color: white;
+  position: relative;
+}
+.sideBar .liIncome:hover a {
+  position: absolute;
+  transition: transform ease-in 0.2s;
+  padding-top: 4px;
+  top: -5px;
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.sideBar .liExpenses:hover {
+  background-color: black;
+  color: white;
+}
+.sideBar .liExpenses:hover a {
+  position: absolute;
+  transition: transform ease-in 0.2s;
+  padding-top: 4px;
+  top: -8px;
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.sideBar .liGraph:hover {
+  background-color: black;
+  color: white;
+}
+.sideBar .liGraph:hover a {
+  position: absolute;
+  transition: transform ease-in 0.2s;
+  padding-top: 4px;
+  top: -8px;
+  background-color: whitesmoke;
+  color: black;
+  opacity: 1;
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+.sideBar i {
+  padding: 3px 5px 3px 4px;
+  color: white;
+  font-size: 38px;
+}
+.sideBar i:hover {
+  transition: transform ease-in 0.2s;
+  border-radius: 10%;
+  color: black;
+  background-color: white;
+}
+.sideBar a {
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  left: 80px;
+  border-radius: 0.4rem;
+  margin-bottom: 50px;
+  background-color: white;
+  padding: 0px 6px 10px 6px;
+  color: #060606;
+  opacity: 0;
+}
+.sideBar .sideBar__logo__icon {
+  font-size: larger;
+}
+
+.navbar {
+  position: absolute;
+  margin-left: 0px;
+  padding-left: 90px;
+  background: 10%;
+  left: 80px;
+  width: 100%;
+  height: 4rem;
+  color: white;
+  background-color: #1d1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbarTitle {
+  padding-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.logoutBtn {
+  padding-right: 2rem;
+  font-size: 1.3rem;
+}
+
+.categories {
+  position: relative;
+  left: 300px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+}
+
+#expenseButton {
+  position: absolute;
+  left: 300px;
+  top: 5rem;
+  width: 10rem;
+  height: 1.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: #134f88;
+}
+
+#incomButton {
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  width: 10rem;
+  height: 1.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: #176baf;
+}
+
+.buttonText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f8f4e1;
+}
+
+#expensesWrapper {
+  position: absolute;
+  top: 10rem;
+  margin-left: 25rem;
+  margin-right: 6rem;
+  border: 1px solid;
+  height: 30rem;
+  background-color: #f8f4e1;
+}
+
+.expensesTitle {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  font-size: 1.3rem;
+}
+
+.singleExpenseWrapper {
+  border: 1px solid;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: #88c5e4;
+  margin-top: 2rem;
+}
+
+.singleExpense {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
