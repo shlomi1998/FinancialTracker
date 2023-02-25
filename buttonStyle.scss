@@ -1,4 +1,4 @@
-#logoutBtn {
+#logoutBtn, #incomeButton, #expenseButton {
     box-shadow:none;
     width: 100px;
     height: 35px;
@@ -21,7 +21,7 @@
     
   }
     
-  #logoutBtn:hover{ 
+  #logoutBtn:hover, #incomeButton:hover, #expenseButton:hover{ 
     background: #85CDFD;
     border: 1px solid white;
   }
