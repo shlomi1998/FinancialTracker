@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="dist/buttonStyle.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="dist/view.js" defer></script>
+    <script src="dist/controller.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,13 +16,13 @@
       rel="stylesheet"
     />
     <script src="./dist/control.js" defer></script>
-    <title>Document</title>
+    <title>Financial Tracker - Home</title>
   </head>
   <body>
 
     <div class="navbar">
       <div class="navbarTitle">Financial Tracker</div>
-      <div class="logoutBtn">Log Out</div>
+      <button id="logoutBtn">Logout</button>
     </div>
     <div class="categories">
       <div id="incomButton" onclick="toggleOptions('INCOME')"><div class="buttonText">income</div></div>
