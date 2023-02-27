@@ -5,6 +5,7 @@ class User {
     expenses:Array<object>;
     imageUrl:string;
     isAdmin:boolean;
+    
 
     constructor(username, password) {
         this.username = username;
