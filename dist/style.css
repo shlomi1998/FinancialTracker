@@ -1,128 +1,437 @@
 * {
-  color: black;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
-  background-color: #10171B;
 }
 
-.loginAndRegisterContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+.navbar {
+  position: absolute;
+  background-color: black;
+  height: 8vh;
   width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  background-color: #10171B;
-  background-image: url("../images/table.jpg");
-  background-size: cover;
-  gap: 40px;
-}
-.loginAndRegisterContainer h1 {
-  font-size: 60px;
-  color: #3C84AB;
-}
-.loginAndRegisterContainer .main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
-  background-color: white;
-  height: 450px;
-  border: 3px;
   gap: 20px;
 }
-.loginAndRegisterContainer .main h2 {
-  padding: 0;
-  margin: 0;
-  font-size: 50px;
+.navbar__loginOut {
+  background-color: #eaeaea;
+  color: black;
+  padding: 2px 2px 2px 2px;
+  width: 6rem;
+  height: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1.1rem;
+  border-radius: 10px;
+  font-family: "Tilt Warp", cursive;
 }
-.loginAndRegisterContainer .main a {
-  all: unset;
-  cursor: pointer;
-  text-decoration: underline;
+.navbar__loginOut:hover {
+  background-color: white;
+  color: black;
 }
-.loginAndRegisterContainer .main form {
-  width: 100%;
-  height: 250px;
+
+.sideBar {
+  position: absolute;
+  height: 100vh;
+  background-color: black;
+  width: 85px;
+  font-family: "Tilt Warp", cursive;
+}
+.sideBar .sideBar__logo {
+  position: absolute;
+  top: 28px;
+  left: 15px;
+  color: white;
+  display: none;
+}
+.sideBar .sideBar__logo__icon {
+  pointer-events: none;
+}
+.sideBar__hamburger {
+  font-size: x-large;
+  margin-top: 25px;
+  margin-left: 25px;
+  color: white;
+  padding: 2px 2px 2px 2px;
+}
+.sideBar__inputImg {
+  position: absolute;
+  margin-top: 60px;
+  height: 60px;
+  left: 0;
+  opacity: 0;
+}
+.sideBar__profile {
+  margin-top: 60px;
+  border: 2px solid #090909;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 2px rgba(234, 225, 225, 0);
+}
+.sideBar__profile:hover {
+  filter: opacity(80%);
+}
+.sideBar__profile__details {
+  position: relative;
+  color: white;
+  margin-left: 28px;
+  top: 5px;
+}
+.sideBar__possibility {
+  margin-top: 20px;
+  margin-left: 12px;
+  list-style: none;
+}
+.sideBar__possibility li {
+  margin-top: 80px;
+  border-radius: 20%;
+  background-color: #020202;
+  color: white;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+.sideBar__possibility li a {
+  opacity: 0;
+}
+.sideBar__possibility li:hover {
+  position: relative;
+  background-color: white;
+  color: black;
+}
+.sideBar__possibility li:hover a {
+  text-decoration: none;
+  position: absolute;
+  margin-left: 20px;
+  font-size: xx-large;
+  left: 40px;
+  background-color: white;
+  color: black;
+}
+.sideBar .liIncome:hover {
+  background-color: black;
+  color: white;
+  position: relative;
+}
+.sideBar .liIncome:hover a {
+  position: absolute;
+  transition: transform ease-in 0.2s;
+  padding-top: 4px;
+  top: -5px;
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.sideBar .liExpenses:hover {
+  background-color: black;
+  color: white;
+}
+.sideBar .liExpenses:hover a {
+  position: absolute;
+  transition: transform ease-in 0.2s;
+  padding-top: 4px;
+  top: -8px;
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.sideBar .liGraph:hover {
+  background-color: black;
+  color: white;
+}
+.sideBar .liGraph:hover a {
+  position: absolute;
+  transition: transform ease-in 0.2s;
+  padding-top: 4px;
+  top: -8px;
+  background-color: whitesmoke;
+  color: black;
+  opacity: 1;
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+.sideBar i {
+  padding: 3px 5px 3px 4px;
+  color: white;
+  font-size: 38px;
+}
+.sideBar i:hover {
+  transition: transform ease-in 0.2s;
+  border-radius: 10%;
+  color: black;
+  background-color: white;
+}
+.sideBar a {
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  left: 80px;
+  border-radius: 0.4rem;
+  margin-bottom: 50px;
+  background-color: white;
+  padding: 0px 6px 10px 6px;
+  color: #060606;
+  opacity: 0;
+}
+.sideBar .sideBar__logo__icon {
+  font-size: larger;
+}
+
+.monthAndYear {
+  position: absolute;
+  top: 10vh;
+  left: 45%;
+  color: #111010;
+}
+
+.calculationsContainer {
+  position: absolute;
+  top: 10rem;
+  left: 260px;
+  right: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  background-color: rgba(141, 141, 141, 0.7);
+  border-radius: 10%;
+  height: 75vh;
+  width: 70vw;
 }
-.loginAndRegisterContainer .main form input {
-  height: 40px;
-  width: 260px;
-  font-size: 20px;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-}
-.loginAndRegisterContainer .main form #regitserPopMessage {
+.calculationsContainer__currentSalary {
   position: absolute;
-  bottom: 130px;
-  padding: 0;
-  margin: 0;
-  color: red;
+  top: 5vh;
+  left: 40%;
 }
-.loginAndRegisterContainer .main form #loginPopMessage {
-  position: absolute;
-  bottom: 165px;
-  padding: 0;
-  margin: 0;
-  color: red;
-}
-.loginAndRegisterContainer .main form #submitBtn {
-  box-shadow: none;
-  width: 150px;
-  height: 45px;
-  transition: 500ms;
-  backface-visibility: hidden;
-  margin-top: 10px;
+.calculationsContainer__currentSalary .calculationsContainer__currentSalary__p {
   position: relative;
-  cursor: pointer;
-  display: inline-block;
-  white-space: nowrap;
-  background: linear-gradient(180deg, #f9f9f9 0%, #e0e0e0 100%);
-  border-radius: 50px;
-  padding: 4px 22px 5px 22px;
+  top: -2vh;
+  font-size: xx-large;
   color: black;
-  font-size: 18px;
-  border: 1px solid #3C84AB;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: 900;
-  font-style: normal;
 }
-.loginAndRegisterContainer .main form #submitBtn:hover {
-  background: #85CDFD;
-  border: 1px solid white;
+.calculationsContainer__incom {
+  position: relative;
+  height: 7vh;
+  margin-top: 20px;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  border: 2px solid black;
+  background-color: #22b081;
+}
+.calculationsContainer__incom--incomes {
+  position: absolute;
+  top: 1vh;
+  left: 2vw;
+  font-size: x-large;
+}
+.calculationsContainer__incom__amountOfRevenue {
+  position: absolute;
+  right: 5vh;
+  top: 1vh;
+  font-size: x-large;
+  color: white;
+}
+.calculationsContainer__expnse {
+  position: relative;
+  height: 7vh;
+  background-color: #e56161;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: columns;
+  justify-content: space-between;
+}
+.calculationsContainer__expnse--expenses {
+  position: absolute;
+  top: 1vh;
+  left: 2vw;
+  font-size: x-large;
+}
+.calculationsContainer__expnse__amountOfExpenses {
+  position: absolute;
+  right: 5vh;
+  top: 1vh;
+  font-size: x-large;
+  color: white;
+}
+.calculationsContainer__TypesOfIncom {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: white;
+  height: 10rem;
+  width: 15rem;
+  align-self: self-start;
+  position: relative;
+  left: 7%;
+  border: 2px solid #40d961;
+}
+.calculationsContainer__TypesOfIncom .calculationsContainer__TypesOfIncomes {
+  position: absolute;
+  left: 1vw;
+  top: 0.5vh;
+  font-size: x-large;
+  color: #22b081;
+}
+.calculationsContainer__TypesOfIncom .calculationsContainer__TypesIncomes {
+  color: #223e35;
+  width: 85%;
+  margin-left: 10px;
+  height: 20px;
+  position: relative;
+  top: 5vh;
+  border: 2px solid #17cb56;
+}
+.calculationsContainer__TypesOfExpense {
+  overflow-y: scroll;
+  background-color: white;
+  height: 10rem;
+  width: 15rem;
+  position: absolute;
+  right: 5vw;
+  top: 45vh;
+  border: 2px solid #ff2828;
+}
+.calculationsContainer__TypesOfExpense .calculationsContainer__TypesOfExpenses {
+  position: absolute;
+  left: 1vw;
+  top: 0.5vh;
+  font-size: x-large;
+  color: #e56161;
+}
+.calculationsContainer__TypesOfExpense .calculationsContainer__TypesExpense {
+  color: #223e35;
+  width: 85%;
+  margin-left: 10px;
+  height: 20px;
+  position: relative;
+  top: 5vh;
+  border: 2px solid #ff5151;
 }
 
-@media screen and (max-width: 390px) {
-  .loginAndRegisterContainer h1 {
-    font-size: 45px;
-  }
-
-  .main {
-    width: 350px;
-  }
+.income__container {
+  position: absolute;
+  background-color: rgba(4, 4, 4, 0.8);
+  border-radius: 10%;
+  width: 400px;
+  height: 400px;
+  margin-right: 5vw;
+  top: 30vh;
+  left: 40vw;
+  right: 40vw;
+  border: 2px solid;
+  display: none;
 }
-@media screen and (min-width: 400px) {
-  .main {
-    width: 600px;
-  }
+.income__container .income__container__titel {
+  position: absolute;
+  color: aquamarine;
+  position: absolute;
+  top: 6vh;
+  margin-left: 12%;
+}
+.income__container .income__container__income {
+  position: absolute;
+  top: 10vh;
+  margin-left: 12%;
+  margin-right: 12%;
+  font-size: x-large;
+  border-radius: 0%;
+}
+.income__container .income__container__typeIncome {
+  position: absolute;
+  top: 20vh;
+  margin-left: 12%;
+  margin-right: 12%;
+  font-size: x-large;
+  border-radius: 0%;
+  border: none;
+}
+.income__container .income__container__selectTypeIncom {
+  position: absolute;
+  top: 30vh;
+  width: 76%;
+  margin-left: 12%;
+  font-size: x-large;
+  border: none;
+}
+.income__container .income__container__buttonAdd {
+  position: absolute;
+  top: 40vh;
+  background-color: aquamarine;
+  width: 100px;
+  height: 40px;
+  margin-left: 35%;
+  border-radius: 10px;
+  font-size: large;
+  font-family: "Tilt Warp", cursive;
+}
+.income__container .income__container__buttonAdd:hover {
+  background-color: #48f8bd;
+}
+
+.expense__container {
+  position: absolute;
+  background-color: rgba(4, 4, 4, 0.8);
+  border-radius: 10%;
+  width: 400px;
+  height: 400px;
+  margin-right: 5vw;
+  top: 30vh;
+  left: 40vw;
+  right: 40vw;
+  border: 2px solid;
+  display: none;
+}
+.expense__container .expense__container__titel {
+  position: absolute;
+  color: #ff7f7f;
+  position: absolute;
+  top: 6vh;
+  margin-left: 12%;
+}
+.expense__container .expense__container__expense {
+  position: absolute;
+  top: 10vh;
+  margin-left: 12%;
+  margin-right: 12%;
+  font-size: x-large;
+  border-radius: 0%;
+}
+.expense__container .expense__container__typeExpense {
+  position: absolute;
+  top: 20vh;
+  margin-left: 12%;
+  margin-right: 12%;
+  font-size: x-large;
+  border-radius: 0%;
+  border: none;
+}
+.expense__container .expense__container__selectTypeExpense {
+  position: absolute;
+  top: 30vh;
+  width: 76%;
+  margin-left: 12%;
+  font-size: x-large;
+  border: none;
+}
+.expense__container .expense__container__buttonAdd {
+  position: absolute;
+  top: 40vh;
+  background-color: #fb5b5b;
+  width: 100px;
+  height: 40px;
+  margin-left: 35%;
+  border-radius: 10px;
+  font-size: large;
+  font-family: "Tilt Warp", cursive;
+}
+.expense__container .expense__container__buttonAdd:hover {
+  background-color: #ff2121;
+}
+
+.RemoveIncome {
+  font-size: medium;
+  color: red;
 }

@@ -4,6 +4,7 @@ var User = /** @class */ (function () {
         this.password = password;
         this.incomes = [];
         this.expenses = [];
+        this.imageUrl = '';
         this.isAdmin = false;
     }
     return User;

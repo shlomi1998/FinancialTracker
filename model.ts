@@ -3,6 +3,7 @@ class User {
     password: string;
     incomes:Array<object>;
     expenses:Array<object>;
+    imageUrl:string;
     isAdmin:boolean;
 
     constructor(username, password) {
@@ -10,6 +11,7 @@ class User {
         this.password = password;
         this.incomes = [];
         this.expenses = [];
+        this.imageUrl = ''
         this.isAdmin = false;
     }
 
