@@ -49,3 +49,6 @@ enum EXPENSES_CATEGORIES {
     category: INCOME_CATEGORIES_LITERALS;
     sum: number;
   }
+
+
+  

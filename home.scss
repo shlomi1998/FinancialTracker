@@ -1,8 +1,8 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
 }
 
 
@@ -10,12 +10,12 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   overflow: hidden;
- 
+
 }
 
 
-.sideBar{
-  position:relative;
+.sideBar {
+  position: relative;
   height: 100vh;
   background-color: rgb(0, 0, 0);
   width: 85px;
@@ -28,32 +28,32 @@ body {
     left: 15px;
     color: rgb(255, 255, 255);
     display: none;
-    
+
   }
- 
+
   &__logo__icon {
     pointer-events: none;
   }
- 
-
-
- 
 
 
 
 
-  &__hamburger{
-  font-size:x-large;
-  margin-top: 25px;
- margin-left: 25px;
- color: white;
- padding: 2px 2px 2px 2px;
+
+
+
+
+  &__hamburger {
+    font-size: x-large;
+    margin-top: 25px;
+    margin-left: 25px;
+    color: white;
+    padding: 2px 2px 2px 2px;
 
   }
 
 
- 
-  &__inputImg{
+
+  &__inputImg {
     position: absolute;
     margin-top: 60px;
     height: 60px;
@@ -64,159 +64,163 @@ body {
 
 
 
-&__profile{
-margin-top: 60px;
-border: 2px solid rgb(255, 255, 255);
-border-radius: 100%;
-width: 60px;
-height: 60px;
-margin-left:10px;
-box-shadow: 2px 2px 2px rgba(227, 223, 223, 0);
+  &__profile {
+    margin-top: 60px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    box-shadow: 2px 2px 2px rgba(227, 223, 223, 0);
   }
-  
-  &__profile:hover{ 
+
+  &__profile:hover {
     filter: opacity(80%);
   }
 
-  &__profile__details{
+  &__profile__details {
     position: relative;
     color: white;
     margin-left: 28px;
-    top:5px
-   
-  }
-  
-
- &__possibility{
-margin-top: 20px;
-margin-left: 12px;
-list-style: none;
-
-
-li{
-  margin-top: 80px;
-  border-radius: 20%;
-  background-color: rgb(2, 2, 2);
-  color: rgb(255, 255, 255);
-  margin-right: 20px;
-  margin-left: 10px;
-
-
-  a{
-    opacity: 0;
+    top: 5px
   }
 
+  // .sideBar__possibility__graphLink:hover{
+  //   opacity: 1;
+  // }
 
-}
+  &__possibility {
+    margin-top: 20px;
+    margin-left: 12px;
+    list-style: none;
 
 
-li:hover{
-  position: relative;
-  background-color: white;
-  color: black;
- 
+    li {
+      margin-top: 80px;
+      border-radius: 20%;
+      background-color: rgb(2, 2, 2);
+      color: rgb(255, 255, 255);
+      margin-right: 20px;
+      margin-left: 10px;
 
-  a{
-    text-decoration: none; 
+
+      a {
+        opacity: 0;
+      }
+
+
+    }
+
+
+    li:hover {
+      position: relative;
+      background-color: white;
+      color: black;
+
+
+      a {
+        text-decoration: none;
+        position: absolute;
+        margin-left: 20px;
+        font-size: xx-large;
+        left: 40px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+      }
+
+    }
+  }
+
+
+  .liIncome:hover {
+    background-color: black;
+    color: white;
+    position: relative;
+
+    a {
+      position: absolute;
+      transition: transform ease-in .2s;
+      padding-top: 4px;
+      top: -5px;
+      box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+      opacity: 1;
+    }
+  }
+
+  .liExpenses:hover {
+    background-color: black;
+    color: white;
+
+    a {
+      position: absolute;
+      transition: transform ease-in .2s;
+      padding-top: 4px;
+      top: -8px;
+      box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+      opacity: 1;
+    }
+  }
+
+  .liGraph:hover {
+    background-color: black;
+    color: white;
+
+    a {
+      position: absolute;
+      transition: transform ease-in .2s;
+      padding-top: 4px;
+      top: -8px;
+      background-color: whitesmoke;
+      color: rgb(0, 0, 0);
+      opacity: 1;
+      box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  i {
+    padding: 3px 5px 3px 4px;
+    color: white;
+    font-size: 38px;
+  }
+
+  i:hover {
+    transition: transform ease-in .2s;
+    border-radius: 10%;
+    color: black;
+    background-color: white;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
     position: absolute;
-    margin-left: 20px;
-    font-size: xx-large;
-    left: 40px;
+    left: 80px;
+    border-radius: 0.4rem;
+    margin-bottom: 50px;
     background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    padding: 0px 6px 10px 6px;
+    color: rgb(6, 6, 6);
+    // border-radius: 0% 10% 10% 0%;
+    opacity: 0;
+
   }
 
-}
-}
-
-
-.liIncome:hover{
-  background-color: black;
-  color: white;
-  position: relative;
-
-  a{
-    position: absolute;
-    transition: transform ease-in .2s ;
-    padding-top: 4px;
-    top:-5px;
-    box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.2) ;
-    opacity: 1;
-  }
-}
-.liExpenses:hover{
-  background-color: black;
-  color: white;
-  
-  a{
-    position: absolute;
-    transition: transform ease-in .2s ;
-    padding-top: 4px;
-    top:-8px;
-    box-shadow:0 0.5rem 0.8rem rgba(0,0,0,0.2) ;
-    opacity: 1;
-  }
-}
-.liGraph:hover{
-  background-color: black;
-  color: white;
-  
-  a{  
-    position: absolute;
-    transition: transform ease-in .2s ;
-    padding-top: 4px;
-    top:-8px;
-    background-color: whitesmoke;
-    color: rgb(0, 0, 0);
-    opacity: 1;
-    box-shadow:0 0.5rem 0.8rem rgba(0,0,0,0.2) ;
+  .sideBar__logo__icon {
+    font-size: larger;
   }
 }
 
-i{
- padding:3px 5px 3px 4px;
- color: white; 
- font-size:38px;
-}
 
-i:hover{
-  transition: transform ease-in .2s ;
-  border-radius: 10%;
-  color: black;
-  background-color: white; 
-}
 
-a{
-  text-decoration: none; 
-  font-weight: bold;
+
+
+
+
+
+
+.navbar {
   position: absolute;
-  left: 80px;
-  border-radius: 0.4rem;
-  margin-bottom: 50px;
-  background-color: rgb(255, 255, 255);
-  padding:0px 6px 10px 6px;
-  color: rgb(6, 6, 6);
-  // border-radius: 0% 10% 10% 0%;
-  opacity: 0;
-
-}
-
-.sideBar__logo__icon{
-font-size:larger;
-}
-}
-
-
-
-
-
-
-
-
-
-.navbar{
-  position: absolute;
-  margin-left:0px ;
+  margin-left: 0px;
   padding-left: 90px;
   background: 10%;
   left: 80px;
@@ -228,12 +232,13 @@ font-size:larger;
   align-items: center;
   justify-content: space-around;
 }
-.navbarTitle{
+
+.navbarTitle {
   padding-left: 2rem;
   font-size: 1.5rem;
 }
 
-.logoutBtn{
+.logoutBtn {
   padding-right: 2rem;
   font-size: 1.3rem;
 
@@ -254,8 +259,9 @@ font-size:larger;
   margin-bottom: 1rem;
   margin-top: 5rem;
 }
+
 #expenseButton {
-position: absolute;
+  position: absolute;
   left: 300px;
   top: 5rem;
   width: 10rem;
@@ -263,10 +269,11 @@ position: absolute;
   border: 1px solid black;
   border-radius: 10px;
   font-size: 1.2rem;
-  background-color:rgb(19, 79, 136);
+  background-color: rgb(19, 79, 136);
 }
+
 #incomButton {
-  position:absolute;
+  position: absolute;
   top: 5rem;
   right: 2rem;
   width: 10rem;
@@ -276,12 +283,14 @@ position: absolute;
   font-size: 1.2rem;
   background-color: rgb(23, 107, 175);
 }
+
 .buttonText {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:rgb(248, 244, 225);
+  color: rgb(248, 244, 225);
 }
+
 #expensesWrapper {
   position: absolute;
   top: 10rem;
@@ -291,6 +300,7 @@ position: absolute;
   height: 30rem;
   background-color: rgb(248, 244, 225);
 }
+
 .expensesTitle {
 
   margin-bottom: 2rem;
@@ -308,6 +318,7 @@ position: absolute;
   background-color: rgb(136, 197, 228);
   margin-top: 2rem;
 }
+
 .singleExpense {
   display: flex;
   align-items: center;
