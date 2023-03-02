@@ -248,7 +248,7 @@ body {
 .calculationsContainer__currentSalary {
   position: absolute;
   top: 5vh;
-  left: 40%;
+  left: 45%;
 }
 .calculationsContainer__currentSalary .calculationsContainer__currentSalary__p {
   position: relative;
@@ -357,15 +357,16 @@ body {
   top: 2px;
   right: 1px;
   font-size: medium;
-  color: #02c855;
+  color: #52f797;
 }
 .calculationsContainer__TypesOfIncom :hover .RemoveIncome {
+  cursor: pointer;
   position: absolute;
   top: 2px;
   right: 5%;
   transform: translate(2s);
   font-size: large;
-  color: #00ff6a;
+  color: #049a43;
 }
 .calculationsContainer__TypesOfExpense {
   overflow-y: scroll;
@@ -410,8 +411,10 @@ body {
   color: #fa5858;
   position: absolute;
   right: 20%;
+  cursor: pointer;
 }
 .calculationsContainer__TypesOfExpense :hover .RemoveExpnse {
+  cursor: pointer;
   position: absolute;
   right: 5%;
   transform: translate(2s);

@@ -95,7 +95,7 @@ liIncome === null || liIncome === void 0 ? void 0 : liIncome.addEventListener("c
         if (inputIncom && selectTypeIncom) {
             uidIncom++;
             var newIncom = document.querySelector(".calculationsContainer__TypesOfIncom");
-            newIncom.innerHTML += " <div class=\"calculationsContainer__TypesIncomes \" id=\"" + inputIncom + "\">\n       " + selectTypeIncom + "  (\"" + typeIncome + "\") &nbsp;&nbsp;&nbsp;&nbsp;  +  " + inputIncom + " \n       <span class=\"RemoveIncome fa-solid fa-circle-minus\" id=\"" + inputIncom + "\"></span> </div>\n        <br>";
+            newIncom.innerHTML += " <div class=\"calculationsContainer__TypesIncomes \" id=\"" + inputIncom + "\">\n       " + selectTypeIncom + "  (" + typeIncome + ") &nbsp;&nbsp;&nbsp;&nbsp;  +  " + inputIncom + " \n       <span class=\"RemoveIncome fa-solid fa-circle-minus\" id=\"" + inputIncom + "\"></span> </div>\n        <br>";
             //       console.log(typeof( selectTypeIncom))
             var moneyIsAvailable_1 = document.querySelector(".calculationsContainer__incom__amountOfRevenue");
             sumIncom += parseInt(inputIncom);
