@@ -99,9 +99,9 @@ body {
 .sideBar__user__imageIcon {
   color: black;
   font-weight: bolder;
-  font-size: 12px;
+  font-size: 11px;
   position: absolute;
-  left: 55px;
+  left: 56px;
   top: 125px;
 }
 .sideBar__profile {
