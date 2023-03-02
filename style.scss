@@ -8,10 +8,31 @@
     overflow-x: hidden;
   
   }
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+  height: 3px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #d2d2d2;
+}
   
   .navbar {
     position: absolute;
-    background-color: black;
+    // background-color: black;
+    background-image: linear-gradient(to left, #868f96 0%, #000000 100%);
     height: 8vh;
     width: 100%;
     display: flex;
@@ -45,8 +66,9 @@
   .sideBar {
     position: absolute;
     height: 100vh;
-    background-color: rgb(0, 0, 0);
-    width: 85px;
+    // background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to right, #000000 0%, #000000 100%);
+    width: 90px;
     font-family: 'Tilt Warp', cursive;
   
   
@@ -64,8 +86,7 @@
     }
   
   
-  
-  
+   
   
   
   
@@ -78,40 +99,68 @@
       padding: 2px 2px 2px 2px;
   
     }
+    &__hamburger:hover {
+      cursor: pointer;
+    }
   
   
   
     &__inputImg {
       position: absolute;
-      margin-top: 60px;
-      height: 60px;
-      left: 0;
+      margin-top: 40px;
+      height: 80px;
+      border-radius: 0% ;
+      left: -80px;
       opacity: 0;
     }
+    &__inputImg:hover {
+      position: absolute;
+      margin-top: 40px;
+      height: 80px;
+      border-radius: 0% ;
+      left: -80px;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+   &__user__imageIcon{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 12px;
+    position: absolute;
+    left: 55px;
+    top: 125px;
+   
+   }
+  
+  
+
   
   
   
   
     &__profile {
       margin-top: 60px;
-      border: 2px solid rgb(9, 9, 9);
+      border: 2px solid rgb(255, 255, 255);
       border-radius: 100%;
       width: 60px;
       height: 60px;
       margin-left: 10px;
       box-shadow: 2px 2px 2px rgba(234, 225, 225, 0);
-  
+      
     }
   
     &__profile:hover {
-      filter: opacity(80%);
+      cursor: pointer;
+      filter: opacity(60%);
+      border:3px solid rgb(255, 255, 255);
     }
   
     &__profile__details {
       position: relative;
       color: white;
       margin-left: 28px;
-      top: 5px
+      top: -25px
     }
   
   
@@ -142,6 +191,7 @@
         position: relative;
         background-color: white;
         color: black;
+        cursor: pointer;
   
   
         a {
@@ -240,8 +290,10 @@
   .monthAndYear {
     position: absolute;
     top: 10vh;
-    left: 45%;
-    color: rgb(17, 16, 16);
+    left: 40vw;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   
@@ -255,7 +307,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     border: 2px solid rgb(0, 0, 0);
-    background-color: rgba(141, 141, 141, 0.7);
+    box-shadow: rgb(44, 62, 80) 0px 0px 15px 0px inset;
+    // background-color: rgba(141, 141, 141, 0.7);
+    background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
     border-radius: 10%;
     height: 75vh;
     width: 70vw;
@@ -269,13 +323,16 @@
       position: relative;
       top: -2vh;
       font-size: xx-large;
-       color: rgb(0, 0, 0);
+       color: rgb(255, 255, 255);
        
       }
     }
   
     &__incom {
       position: relative;
+      color: white;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       height: 7vh;
       margin-top: 20px;
       margin-right: 5vw;
@@ -292,7 +349,7 @@
   
       &__amountOfRevenue {
         position: absolute;
-        right: 5vh;
+        right: 7vh;
         top: 1vh;
         font-size: x-large;
         color: white;
@@ -313,6 +370,9 @@
       display: flex;
       flex-direction: columns;
       justify-content: space-between;
+      color: white;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
       &--expenses {
         position: absolute;
@@ -325,10 +385,23 @@
   
       &__amountOfExpenses {
         position: absolute;
-        right: 5vh;
+        right: 7vh;
         top: 1vh;
         font-size: x-large;
         color: white;
+      }
+      .calculationsContainer__expnse__percentage{
+        position: absolute;
+        padding-left:0.5%;
+        right: 1vh; 
+        top: 22%;
+        width: 40px;
+        height: 20px;
+        color: rgb(255, 0, 0);
+        font-weight: bold;
+        background-color: rgba(255, 201, 201, 0.9);
+        border:none;
+        box-shadow: rgb(255, 255, 255) 0px 0px 15px 0px inset;
       }
   
   
@@ -344,12 +417,16 @@
       position: relative;
       left: 7%;
       border: 2px solid rgb(64, 217, 97);
+      color: white;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      box-shadow: rgb(44, 62, 80) 0px 0px 15px 0px inset;
   
       .calculationsContainer__TypesOfIncomes {
-        
+ 
         position: absolute;
         left: 1vw;
-        top: .5vh;
+        top: 0.5vh;
         font-size: x-large;
         color: rgb(34, 176, 129);
         
@@ -357,21 +434,43 @@
       }
       .calculationsContainer__TypesIncomes{
         color: rgb(34, 62, 53);
-        width:85%;
+        width:90%;
         margin-left: 10px;
         height:20px;
         position:relative;
         top: 5vh;
-        border: 2px  solid rgb(23, 203, 86);
+        border-top:  2px  solid rgb(23, 203, 86);
+        
+
+        .RemoveIncome{
+            position: absolute;
+            top: 2px;
+            right: 1px;
+            font-size: medium;
+            color: rgb(2, 200, 85);
+            
+            
+            }
+        
+
         
        }
   
     }
-  
-  
+    &__TypesOfIncom :hover{
+      .RemoveIncome{
+        position: absolute;
+        top: 2px;
+        right: 5%;
+        transform: translate(2s);
+        font-size: large;
+        color: rgb(0, 255, 106);
+        }
+    }
   
   
     &__TypesOfExpense {
+   
       overflow-y: scroll;
       background-color: rgb(255, 255, 255);
       height: 10rem;
@@ -380,6 +479,7 @@
       right: 5vw;
       top: 45vh;
       border: 2px solid rgb(255, 40, 40);
+      box-shadow: rgb(44, 62, 80) 0px 0px 15px 0px inset;
   
       .calculationsContainer__TypesOfExpenses {
         position: absolute;
@@ -390,18 +490,66 @@
       }
   
       .calculationsContainer__TypesExpense {
+        position: relative;
         color: rgb(34, 62, 53);
-        width:85%;
+        width:90%;
         margin-left: 10px;
         height:20px;
-        position:relative;
         top: 5vh;
-        border: 2px  solid rgb(255, 81, 81);
+        border-top: 2px  solid rgb(255, 81, 81);
+        
+        .Percentage{
+          color: rgb(250, 88, 88);
+          position: absolute;
+          right: 10%;
+        }
+
+
+          .RemoveExpnse{
+            position: absolute;
+            top: 2px;
+            right: 1px;
+            font-size: medium;
+            color: rgb(253, 119, 119);
+            
+            
+            }
+      
+
+       
+
+
+
+
+       
       }
+
+
   
   
   
     }
+
+    &__TypesOfExpense :hover{
+      .Percentage{
+        color: rgb(250, 88, 88);
+        position: absolute;
+        right: 20%;
+      }
+      .RemoveExpnse{
+        position: absolute;
+         right: 5%;
+         transform: translate(2s);
+         font-size: large;
+         color: rgb(255, 0, 0);
+         
+
+
+         }
+    }
+
+
+
   
   
   }
@@ -556,9 +704,29 @@
   
   
   }
-  
-  .RemoveIncome{
-  font-size: medium;
-  color: red;
+
+  html, body {
+    width: 100%;
+    height:100%;
   }
+  
+  body {
+      background: linear-gradient(-45deg, #3f3f3f, #4f4f4f, #737474, #3d3b3b);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+ 
   

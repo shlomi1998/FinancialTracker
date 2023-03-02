@@ -7,9 +7,27 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 3px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d2d2d2;
+}
+
 .navbar {
   position: absolute;
-  background-color: black;
+  background-image: linear-gradient(to left, #868f96 0%, #000000 100%);
   height: 8vh;
   width: 100%;
   display: flex;
@@ -37,8 +55,8 @@ body {
 .sideBar {
   position: absolute;
   height: 100vh;
-  background-color: black;
-  width: 85px;
+  background-image: linear-gradient(to right, #000000 0%, #000000 100%);
+  width: 90px;
   font-family: "Tilt Warp", cursive;
 }
 .sideBar .sideBar__logo {
@@ -58,16 +76,37 @@ body {
   color: white;
   padding: 2px 2px 2px 2px;
 }
+.sideBar__hamburger:hover {
+  cursor: pointer;
+}
 .sideBar__inputImg {
   position: absolute;
-  margin-top: 60px;
-  height: 60px;
-  left: 0;
+  margin-top: 40px;
+  height: 80px;
+  border-radius: 0%;
+  left: -80px;
   opacity: 0;
+}
+.sideBar__inputImg:hover {
+  position: absolute;
+  margin-top: 40px;
+  height: 80px;
+  border-radius: 0%;
+  left: -80px;
+  opacity: 0;
+  cursor: pointer;
+}
+.sideBar__user__imageIcon {
+  color: black;
+  font-weight: bolder;
+  font-size: 12px;
+  position: absolute;
+  left: 55px;
+  top: 125px;
 }
 .sideBar__profile {
   margin-top: 60px;
-  border: 2px solid #090909;
+  border: 2px solid white;
   border-radius: 100%;
   width: 60px;
   height: 60px;
@@ -75,13 +114,15 @@ body {
   box-shadow: 2px 2px 2px rgba(234, 225, 225, 0);
 }
 .sideBar__profile:hover {
-  filter: opacity(80%);
+  cursor: pointer;
+  filter: opacity(60%);
+  border: 3px solid white;
 }
 .sideBar__profile__details {
   position: relative;
   color: white;
   margin-left: 28px;
-  top: 5px;
+  top: -25px;
 }
 .sideBar__possibility {
   margin-top: 20px;
@@ -103,6 +144,7 @@ body {
   position: relative;
   background-color: white;
   color: black;
+  cursor: pointer;
 }
 .sideBar__possibility li:hover a {
   text-decoration: none;
@@ -182,8 +224,10 @@ body {
 .monthAndYear {
   position: absolute;
   top: 10vh;
-  left: 45%;
-  color: #111010;
+  left: 40vw;
+  color: white;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .calculationsContainer {
@@ -195,7 +239,8 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   border: 2px solid black;
-  background-color: rgba(141, 141, 141, 0.7);
+  box-shadow: #2c3e50 0px 0px 15px 0px inset;
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
   border-radius: 10%;
   height: 75vh;
   width: 70vw;
@@ -209,10 +254,13 @@ body {
   position: relative;
   top: -2vh;
   font-size: xx-large;
-  color: black;
+  color: white;
 }
 .calculationsContainer__incom {
   position: relative;
+  color: white;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   height: 7vh;
   margin-top: 20px;
   margin-right: 5vw;
@@ -228,7 +276,7 @@ body {
 }
 .calculationsContainer__incom__amountOfRevenue {
   position: absolute;
-  right: 5vh;
+  right: 7vh;
   top: 1vh;
   font-size: x-large;
   color: white;
@@ -243,6 +291,9 @@ body {
   display: flex;
   flex-direction: columns;
   justify-content: space-between;
+  color: white;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .calculationsContainer__expnse--expenses {
   position: absolute;
@@ -252,10 +303,23 @@ body {
 }
 .calculationsContainer__expnse__amountOfExpenses {
   position: absolute;
-  right: 5vh;
+  right: 7vh;
   top: 1vh;
   font-size: x-large;
   color: white;
+}
+.calculationsContainer__expnse .calculationsContainer__expnse__percentage {
+  position: absolute;
+  padding-left: 0.5%;
+  right: 1vh;
+  top: 22%;
+  width: 40px;
+  height: 20px;
+  color: red;
+  font-weight: bold;
+  background-color: rgba(255, 201, 201, 0.9);
+  border: none;
+  box-shadow: white 0px 0px 15px 0px inset;
 }
 .calculationsContainer__TypesOfIncom {
   overflow-y: scroll;
@@ -267,6 +331,10 @@ body {
   position: relative;
   left: 7%;
   border: 2px solid #40d961;
+  color: white;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-shadow: #2c3e50 0px 0px 15px 0px inset;
 }
 .calculationsContainer__TypesOfIncom .calculationsContainer__TypesOfIncomes {
   position: absolute;
@@ -277,12 +345,27 @@ body {
 }
 .calculationsContainer__TypesOfIncom .calculationsContainer__TypesIncomes {
   color: #223e35;
-  width: 85%;
+  width: 90%;
   margin-left: 10px;
   height: 20px;
   position: relative;
   top: 5vh;
-  border: 2px solid #17cb56;
+  border-top: 2px solid #17cb56;
+}
+.calculationsContainer__TypesOfIncom .calculationsContainer__TypesIncomes .RemoveIncome {
+  position: absolute;
+  top: 2px;
+  right: 1px;
+  font-size: medium;
+  color: #02c855;
+}
+.calculationsContainer__TypesOfIncom :hover .RemoveIncome {
+  position: absolute;
+  top: 2px;
+  right: 5%;
+  transform: translate(2s);
+  font-size: large;
+  color: #00ff6a;
 }
 .calculationsContainer__TypesOfExpense {
   overflow-y: scroll;
@@ -293,6 +376,7 @@ body {
   right: 5vw;
   top: 45vh;
   border: 2px solid #ff2828;
+  box-shadow: #2c3e50 0px 0px 15px 0px inset;
 }
 .calculationsContainer__TypesOfExpense .calculationsContainer__TypesOfExpenses {
   position: absolute;
@@ -302,13 +386,37 @@ body {
   color: #e56161;
 }
 .calculationsContainer__TypesOfExpense .calculationsContainer__TypesExpense {
+  position: relative;
   color: #223e35;
-  width: 85%;
+  width: 90%;
   margin-left: 10px;
   height: 20px;
-  position: relative;
   top: 5vh;
-  border: 2px solid #ff5151;
+  border-top: 2px solid #ff5151;
+}
+.calculationsContainer__TypesOfExpense .calculationsContainer__TypesExpense .Percentage {
+  color: #fa5858;
+  position: absolute;
+  right: 10%;
+}
+.calculationsContainer__TypesOfExpense .calculationsContainer__TypesExpense .RemoveExpnse {
+  position: absolute;
+  top: 2px;
+  right: 1px;
+  font-size: medium;
+  color: #fd7777;
+}
+.calculationsContainer__TypesOfExpense :hover .Percentage {
+  color: #fa5858;
+  position: absolute;
+  right: 20%;
+}
+.calculationsContainer__TypesOfExpense :hover .RemoveExpnse {
+  position: absolute;
+  right: 5%;
+  transform: translate(2s);
+  font-size: large;
+  color: red;
 }
 
 .income__container {
@@ -431,7 +539,25 @@ body {
   background-color: #ff2121;
 }
 
-.RemoveIncome {
-  font-size: medium;
-  color: red;
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(-45deg, #3f3f3f, #4f4f4f, #737474, #3d3b3b);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

@@ -5,45 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/style.css" />
-    <link rel="stylesheet" href="dist/buttonStyle.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="dist/buttonStyle.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <script
-    src="https://kit.fontawesome.com/9655756982.js"
-    crossorigin="anonymous"
-    defer
-  ></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
-    rel="stylesheet"
-  />
-  <script src="./dist/model.js" defer></script>
-  <script src="./dist/view.js" defer></script>
-  <script src="./dist/main.js" defer></script>
-  <script src="./dist/controller.js" defer></script>
+      src="https://kit.fontawesome.com/9655756982.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./dist/model.js" defer></script>
+    <script src="./dist/view.js" defer></script>
+    <script src="./dist/main.js" defer></script>
+    <script src="./dist/controller.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/9655756982.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9655756982.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./dist/control.js" defer></script>
     <title>Financial Tracker - Home</title>
   </head>
   <body>
-
-
-
-
-
-
-
-   
-
-
-<!-- 
+    <!-- 
     <div class="navbar">
       <button class="navbar__loginOut">login Out</button>
     </div> -->
@@ -55,12 +48,11 @@
 
     <h2 class="monthAndYear"></h2>
 
-
     <div class="currentMonth"></div>
 
     <div class="sideBar">
       <div class="sideBar__logo">
-        <i class="sideBar__logo__icon fa-solid fa-piggy-bank "></i>
+        <i class="sideBar__logo__icon fa-solid fa-piggy-bank"></i>
         <span class="sideBar__logo__titel">Financial Tracker</span>
       </div>
 
@@ -73,70 +65,67 @@
           type="file"
           accept="image/png , image/jpg"
         />
+        <span class="sideBar__user__imageIcon  fa-sharp fa-solid fa-pen"></span>
+        <label for="file" id="uploadBtn">Choose Photo</label>
         <span class="sideBar__profile__details">bob</span>
       </div>
 
       <ul class="sideBar__possibility">
         <li class="liIncome">
-          <i class="sideBar__icon fa-solid fa-money-check-dollar "></i>
-          <a class="sideBar__possibility__IncomeLink" href="#">
-            <span class="sideBar__item">income</span>
-          </a>
+          <div>
+            <i class="sideBar__icon fa-solid fa-money-check-dollar"></i>
+            <a class="sideBar__possibility__IncomeLink sideBar_icons" href="#">
+              <span class="sideBar__item">income</span>
+            </a>
+          </div>
         </li>
 
         <li class="liExpenses">
           <i class="sideBar__icon fa-solid fa-hand-holding-dollar"></i>
-          <a class="sideBar__possibility__expensesLink" href="#">
+          <a class="sideBar__possibility__expensesLink sideBar_icons" href="#">
             <span class="sideBar__item">expenses</span>
           </a>
         </li>
 
         <li class="liGraph">
           <i class="sideBar__icon fa-solid fa-chart-pie"></i>
-          <a class="sideBar__possibility__graphLink" href="#">
+          <a class="sideBar__possibility__graphLink sideBar_icons" href="#">
             <span class="sideBar__item">graph</span>
           </a>
         </li>
       </ul>
+    </div>
 
+    <div class="calculationsContainer">
+      <div class="calculationsContainer__currentSalary">
+        <p class="calculationsContainer__currentSalary__p">+ 0.00</p>
+      </div>
 
+      <div class="calculationsContainer__incom">
+        <span class="calculationsContainer__incom--incomes">income</span>
+        <span class="calculationsContainer__incom__amountOfRevenue">0.00</span>
+      </div>
 
-      <div class="calculationsContainer">
-        <div class="calculationsContainer__currentSalary">
-          <p class="calculationsContainer__currentSalary__p">+ 0.00</p>
-        </div>
+      <div class="calculationsContainer__expnse">
+        <span class="calculationsContainer__expnse--expenses">expnse</span>
+        <span class="calculationsContainer__expnse__amountOfExpenses"
+          >0.00</span
+        >
+        <span class="calculationsContainer__expnse__percentage">0%</span>
+      </div>
 
-        <div class="calculationsContainer__incom">
-          <span class="calculationsContainer__incom--incomes">incom</span>
-          <span class="calculationsContainer__incom__amountOfRevenue ">0.00</span>
-        </div>
+      <div class="calculationsContainer__TypesOfIncom">
+        <span class="calculationsContainer__TypesOfIncomes">Incomes</span>
+      </div>
 
-        <div class="calculationsContainer__expnse">
-          <span class="calculationsContainer__expnse--expenses">expnse</span>
-          <span class="calculationsContainer__expnse__amountOfExpenses" >0.00</span>
-        </div>
-
-
-        <div class="calculationsContainer__TypesOfIncom">
-          <span class="calculationsContainer__TypesOfIncomes  ">Incomes</span>
-         
-        </div>
-
-
-        <div class="calculationsContainer__TypesOfExpense">
-          <span class="calculationsContainer__TypesOfExpenses ">Expenses</span>
-        </div>
-
+      <div class="calculationsContainer__TypesOfExpense">
+        <span class="calculationsContainer__TypesOfExpenses">Expenses</span>
       </div>
     </div>
 
+    <div class="income__container"></div>
 
-     <div class="income__container"> </div> 
-
-    <div class="expense__container"></div> 
-
-   
-
+    <div class="expense__container"></div>
 
     <!-- <div class="income__container">
       <input class="income__container__income" type="number">
@@ -150,8 +139,7 @@
         <option value="General">General</option>
       </select></div>  -->
 
-
-  <!-- <div class="expense__container">
+    <!-- <div class="expense__container">
     <h3 class="income__container__titel">Insert an expense</h3>
       <input class="expense__container__expense" type="number">
       <input class="expense__container__typeExpense" type="text" placeholder="Want to specify what?">
@@ -165,16 +153,5 @@
       </select>
     <button class="expense__container__ButtonAdd">add</button>
   </div> -->
-
-
-
-
-
-        
-
-      <div></div>
-      </div>
-    </div>
   </body>
 </html>
-
