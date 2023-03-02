@@ -317,7 +317,7 @@
     &__currentSalary {
       position: absolute;
       top: 5vh;
-      left: 40%;
+      left: 45%;
   
       .calculationsContainer__currentSalary__p {
       position: relative;
@@ -447,7 +447,7 @@
             top: 2px;
             right: 1px;
             font-size: medium;
-            color: rgb(2, 200, 85);
+            color: rgb(82, 247, 151);
             
             
             }
@@ -459,12 +459,13 @@
     }
     &__TypesOfIncom :hover{
       .RemoveIncome{
+        cursor: pointer;
         position: absolute;
         top: 2px;
         right: 5%;
         transform: translate(2s);
         font-size: large;
-        color: rgb(0, 255, 106);
+        color: rgb(4, 154, 67);
         }
     }
   
@@ -535,8 +536,10 @@
         color: rgb(250, 88, 88);
         position: absolute;
         right: 20%;
+        cursor: pointer;
       }
       .RemoveExpnse{
+        cursor: pointer;
         position: absolute;
          right: 5%;
          transform: translate(2s);

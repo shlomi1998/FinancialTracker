@@ -205,7 +205,7 @@ liIncome?.addEventListener("click", (e) => {
         ".calculationsContainer__TypesOfIncom"
       ) as HTMLDivElement;
       newIncom.innerHTML += ` <div class="calculationsContainer__TypesIncomes " id="${inputIncom}">
-       ${selectTypeIncom}  ("${typeIncome}") &nbsp;&nbsp;&nbsp;&nbsp;  +  ${inputIncom} 
+       ${selectTypeIncom}  (${typeIncome}) &nbsp;&nbsp;&nbsp;&nbsp;  +  ${inputIncom} 
        <span class="RemoveIncome fa-solid fa-circle-minus" id="${inputIncom}"></span> </div>
         <br>`;
 
