@@ -26,3 +26,18 @@ var INCOME_CATEGORIES;
     INCOME_CATEGORIES["General"] = "General";
     INCOME_CATEGORIES["Bonus"] = "Bonus";
 })(INCOME_CATEGORIES || (INCOME_CATEGORIES = {}));
+var currentDate = new Date();
+var month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "june",
+    "july",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+];
