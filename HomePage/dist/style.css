@@ -222,12 +222,13 @@ body {
 }
 
 .monthAndYear {
-  position: absolute;
-  top: 10vh;
-  left: 40vw;
+  font-family: "Fredoka One", cursive;
   color: white;
-  font-weight: bold;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  position: absolute;
+  top: 12vh;
+  left: 40vw;
+  font-size: 30px;
 }
 
 .calculationsContainer {
@@ -542,7 +543,8 @@ body {
   background-color: #ff2121;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }

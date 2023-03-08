@@ -50,6 +50,22 @@ enum EXPENSES_CATEGORIES {
     sum: number;
   }
 
-  
+const currentDate = new Date();
+const month: string[] = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "june",
+  "july",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+
 
   
