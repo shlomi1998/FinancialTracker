@@ -454,7 +454,7 @@ function sumBills(sumBills:number):void{
 
  }
 
-window.addEventListener('load',(e){  
+window.addEventListener('load',(e)=>{  
  totalRent =0;
  localStorage.setItem('totalEntertainment',JSON.stringify(totalEntertainment));
  totalGrocories =0;
