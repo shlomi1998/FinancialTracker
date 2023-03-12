@@ -370,6 +370,8 @@ body {
   color: #049a43;
 }
 .calculationsContainer__TypesOfExpense {
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   overflow-y: scroll;
   background-color: white;
   height: 10rem;
@@ -400,6 +402,8 @@ body {
   color: #fa5858;
   position: absolute;
   right: 10%;
+  font-style: normal;
+  font-weight: normal;
 }
 .calculationsContainer__TypesOfExpense .calculationsContainer__TypesExpense .RemoveExpnse {
   position: absolute;
