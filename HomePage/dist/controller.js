@@ -139,22 +139,22 @@ liExpenses === null || liExpenses === void 0 ? void 0 : liExpenses.addEventListe
         if (inputExpnse && selectTypeExpnse) {
             switch (selectTypeExpnse) {
                 case "Rent":
-                    sumRent(1);
+                    sumRent(parseInt(inputExpnse));
                     break;
                 case "Grocories":
-                    sumGrocories(1);
+                    sumGrocories(parseInt(inputExpnse));
                     break;
                 case "Entertainment":
-                    sumEntertainment(1);
+                    sumEntertainment(parseInt(inputExpnse));
                     break;
                 case "Restaurants":
-                    sumRestaurants(1);
+                    sumRestaurants(parseInt(inputExpnse));
                     break;
                 case "Bills":
-                    sumBills(1);
+                    sumBills(parseInt(inputExpnse));
                     break;
                 case "General":
-                    sumGeneral(1);
+                    sumGeneral(parseInt(inputExpnse));
                     break;
             }
             uidExpense++;
